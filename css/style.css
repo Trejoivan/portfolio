@@ -41,6 +41,9 @@ body {
 .logo {
   height: 8.2rem;
 }
+
+
+
 /* ***************************************** */
 /* Navigation */
 /* ***************************************** */
@@ -75,6 +78,7 @@ body {
 .main-nav-link.nav-cta:active {
   background-color: var(--main-color-darker);
 }
+
 /* 
 Mobile */
 .btn-mobile-nav {
@@ -94,6 +98,7 @@ Mobile */
   display: none;
 }
 
+
 /* ***************************************** */
 /* Sticky Navigation*/
 /* ***************************************** */
@@ -112,10 +117,12 @@ Mobile */
 .sticky .section-hero {
   margin-top: 8rem;
 }
+
+
+
 /* ***************************************** */
 /* HERO SECTION */
 /* ***************************************** */
-
 
 
 .hero {
@@ -134,15 +141,31 @@ Mobile */
 }
 .hero-img {
   width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 1.2rem 3.2rem rgba
 }
 .section-hero {
   background-color: var(--main-background-color-light);
   padding: 4.8rem 0;
 }
 
+
+
+
 /* ***************************************** */
-/* featured in section*/
+/*clock*/
 /* ***************************************** */
+
+.clock {
+  display: flex;
+  justify-content: center;
+  height: 2rem;
+  font-size: 3rem;
+}
+
+/* ***************************************** */
+/* ***************************************** */
+
 
 .section-featured {
   padding: 4.6rem 0 3.2rem 0;
@@ -174,8 +197,25 @@ Mobile */
   padding: 9.6rem 0;
 }
 .step-img {
-  width: 43%;
+  width: 46%;
+  border-radius: 80%
 }
+
+.step-img:hover {
+  transition: all 0.4s ease-in;
+  width: 60%;
+}
+img#hospital:hover {
+  transition: all 0.4s ease-in;
+  width: 27rem;
+  height: 27rem;
+}
+
+img#hospital{
+  width: 21rem;
+  height: 21rem;
+}
+
 .step-number {
   font-size: 8.6rem;
   font-weight: 600;

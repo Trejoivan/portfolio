@@ -6,6 +6,7 @@ yearEl.textContent = currentYear;
 ///////////////////// () //////////////////////////
 ///////////////////// () //////////////////////////
 ///////////////////// () //////////////////////////
+
 // make mobile nav work
 const btnNav = document.querySelector('.btn-mobile-nav');
 const header = document.querySelector('header');
@@ -17,34 +18,33 @@ btnNav.addEventListener('click', function () {
 ///////////////////// () //////////////////////////
 // SMooth scrolling
 
-// const allLinks = document.querySelectorAll('a:link');
-// console.log(allLinks);
+const allLinks = document.querySelectorAll('a:link');
+console.log(allLinks);
 
-// allLinks.forEach(function (link) {
-//   link.addEventListener('click', function (e) {
-//     e.preventDefault();
-//     const href = link.getAttribute('href');
+allLinks.forEach(function (link) {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    const href = link.getAttribute('href');
 
-//     //scroll back to top
-//     if (href === '#')
-//       window.scrollTo({
-//         top: 0,
-//         behavior: 'smooth',
-//       });
-//     // scroll to other links
-//     if (href !== '#' && href.startsWith('#')) {
-//       const sectionEl = document.querySelector(href);
-//       sectionEl.scrollIntoView({ behavior: 'smooth' });
-//     }
+    //scroll back to top
+    if (href === '#')
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    // scroll to other links
+    if (href !== '#' && href.startsWith('#')) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: 'smooth' });
+    }
 
-//     //close mobil nav
+    //close mobil nav
 
-//     if (link.classList.contains('main-nav-link'))
-//       header.classList.toggle('nav-open');
-//   });
-// });
+    if (link.classList.contains('main-nav-link'))
+      header.classList.toggle('nav-open');
+  });
+});
 
-///////////////////// () //////////////////////////
 ///////////////////// (Stciky Navigation) //////////////////////////
 const sectionHeroEl = document.querySelector('.section-hero');
 const obs = new IntersectionObserver(
@@ -62,7 +62,7 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
-///////////////////// (Fixing flex box gap property missing in some Saari verions) //////////////////////////
+///////////////////// (Fixing flex box gap property missing in some Safari verions) //////////////////////////
 function checkFlexGap() {
   var flex = document.createElement('div');
   flex.style.display = 'flex';
@@ -77,7 +77,7 @@ function checkFlexGap() {
   flex.parentNode.removeChild(flex);
   console.log(isSupported);
 
-  if (!isSupported) document.body.classList.add('no-flex-gap');
+  if (!isSupported)document.body.classList.add('no-flex-gap');
 }
 checkFlexGap();
 
